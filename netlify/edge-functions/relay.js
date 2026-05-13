@@ -1,5 +1,11 @@
 const TARGET_BASE = (Netlify.env.get("TARGET_DOMAIN") || "").replace(/\/$/, "");
-
+//  erferferferferferf
+//  erferferferferferf
+//  erferferferferferf
+//  erfewef  very convenient changes 
+//  erferferferferferf
+//  erferferferferferf
+//  erferferferferferf
 const STRIP_HEADERS = new Set([
   "host",
   "connection",
@@ -15,6 +21,18 @@ const STRIP_HEADERS = new Set([
   "x-forwarded-proto",
   "x-forwarded-port",
 ]);
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default async function handler(request) {
   if (!TARGET_BASE) {
@@ -67,6 +85,7 @@ export default async function handler(request) {
       responseHeaders.set(key, value);
     }
 
+    
     return new Response(upstream.body, {
       status: upstream.status,
       headers: responseHeaders,
